@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>USIU First-Year Companion (v1)</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>🎓 USIU First-Year Companion</h1>
+        <p class="tagline">Your Campus Cost & Commute Planner</p>
+    </header>
+    
+    <main>
+        <section class="greeting-section">
+            <h2 id="greeting">Hello!</h2>
+            <p>Welcome to your quick orientation helper. Plan your weekly campus expenses and get tips for smart budgeting.</p>
+        </section>
+
+        <section class="actions-section">
+            <button id="run" class="btn-primary">💰 Run Estimator</button>
+            <button id="theme" class="btn-secondary">🌓 Toggle Theme</button>
+            <button id="reset" class="btn-secondary">🔄 Reset</button>
+        </section>
+        
+        <section class="summary-section">
+            <h3>📊 Weekly Cost Summary</h3>
+            <pre id="summary">Run the estimator to see your weekly plan…</pre>
+            <p id="student-id" class="student-info"></p>
+        </section>
+
+        <section class="tips-section">
+            <h3>💡 Smart Budgeting Tips</h3>
+            <ul>
+                <li>Consider carpooling with classmates along Thika Road to save on transport</li>
+                <li>Bring snacks from home 2-3 days per week instead of buying daily</li>
+                <li>Use the USIU student discounts at nearby cafes and shops</li>
+                <li>Track your spending for the first month to adjust estimates</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <small>© 2025 USIU Student Affairs | Demo v1 | For Orientation Week</small>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Wire up interactions (demonstrates internal script usage)
+        document.getElementById("run").addEventListener("click", runEstimator);
+        document.getElementById("theme").addEventListener("click", toggleTheme);
+        document.getElementById("reset").addEventListener("click", resetSummary);
+        
+        // Auto-initialize greeting on page load
+        window.addEventListener("load", initializeGreeting);
+        
+        // Extension: Auto-switch theme based on time of day
+        window.addEventListener("load", autoSetTheme);
+    </script>
+</body>
+</html>
