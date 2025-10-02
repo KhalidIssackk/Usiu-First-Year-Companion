@@ -1,0 +1,19 @@
+# Exclude design files and documentation
+design/
+
+# Exclude version control
+.git
+.gitignore
+
+# Exclude system files
+.DS_Store
+Thumbs.db
+
+# Exclude documentation
+README.md
+*.md
+
+# Exclude development files
+node_modules/
+.vscode/
+.idea/
